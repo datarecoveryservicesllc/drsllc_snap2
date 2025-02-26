@@ -42,8 +42,9 @@ function validatePassword(event) {
   
   // Switch between username/email and phone number
   const switchToPhone = document.getElementById('switch-to-phone');
-  const usernameInput = document.getElementById('email');
-  const label = document.querySelector('label[for="username"]');
+ const usernameInput = document.getElementById('username') || document.getElementById('email');
+const label = document.querySelector('label[for="username"]') || document.querySelector('label[for="email"]');
+
   
   switchToPhone.addEventListener('click', function () {
   if (label.textContent === 'USERNAME OR EMAIL') {
