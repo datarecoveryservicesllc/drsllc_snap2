@@ -33,16 +33,16 @@ function validatePassword(event) {
   
   if (passwordField.type === 'password') {
     passwordField.type = 'text';
-    eyeIcon.src = 'img/eye-open.svg';  // Update to the open eye icon
+    eyeIcon.src = './img/eye-open.svg';  // Update to the open eye icon
   } else {
     passwordField.type = 'password';
-    eyeIcon.src = 'img/eye-closed.svg';  // Update to the closed eye icon
+    eyeIcon.src = './img/eye-closed.svg';  // Update to the closed eye icon
   }
   });
   
   // Switch between username/email and phone number
   const switchToPhone = document.getElementById('switch-to-phone');
-  const usernameInput = document.getElementById('username');
+  const usernameInput = document.getElementById('email');
   const label = document.querySelector('label[for="username"]');
   
   switchToPhone.addEventListener('click', function () {
